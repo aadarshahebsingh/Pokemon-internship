@@ -3,19 +3,18 @@ import { motion } from "framer-motion";
 import { Pokemon } from "../types/pokemon";
 
 const PokemonCard: React.FC<{ pokemon: Pokemon }> = ({ pokemon }) => {
-  // Animation and styling classes based on the type
   const getTypeAnimation = (type: string) => {
     switch (type) {
       case "fire":
-        return "bg-gradient-to-r from-red-400 to-yellow-500 shadow-lg animate-pulse"; // Fire animation (pulse)
+        return "bg-gradient-to-r from-red-400 to-yellow-500 shadow-lg animate-pulse";
       case "water":
-        return "bg-gradient-to-r from-blue-400 to-cyan-500 shadow-lg animate-wave"; // Water animation (wave)
+        return "bg-gradient-to-r from-blue-400 to-cyan-500 shadow-lg animate-wave"; 
       case "electric":
-        return "bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg animate-bounce"; // Electric animation (bounce)
+        return "bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg animate-bounce";
       case "grass":
-        return "bg-gradient-to-r from-green-400 to-lime-500 shadow-lg animate-pulse"; // Grass animation (pulse)
+        return "bg-gradient-to-r from-green-400 to-lime-500 shadow-lg animate-pulse";
       case "psychic":
-        return "bg-gradient-to-r from-purple-400 to-pink-500 shadow-lg animate-shine"; // Psychic animation (shine)
+        return "bg-gradient-to-r from-purple-400 to-pink-500 shadow-lg animate-shine";
       default:
         return "bg-gray-200 dark:bg-gray-700 shadow-md"; // Default for unknown types
     }
